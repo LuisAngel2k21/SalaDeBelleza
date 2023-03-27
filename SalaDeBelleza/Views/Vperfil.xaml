@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SalaDeBelleza.Views.Vperfil"
+             Visual="Material"
+             NavigationPage.HasNavigationBar="False">
+    
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <AbsoluteLayout>
+                <Grid BackgroundColor="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Image 
+                        x:Name="imagenCelular"
+                        Grid.Row="0" 
+                        VerticalOptions="Start"
+                        Aspect="Fill"
+                        HeightRequest="345"
+                        WidthRequest="393"/>
+                </Grid>
+                <RelativeLayout>
+                    <ImageButton
+                        x:Name="btnFoto"
+                        Source="iconoCamara"
+                        WidthRequest="50"
+                        HeightRequest="50"
+                        Aspect="AspectFill"
+                        CornerRadius="25"
+                        RelativeLayout.XConstraint="330"
+                        RelativeLayout.YConstraint="230"
+                        RelativeLayout.WidthConstraint="50"
+                        RelativeLayout.HeightConstraint="50"
+                        BackgroundColor="IndianRed"
+                        Clicked="btnFoto_Clicked"/>
+                </RelativeLayout>
+            </AbsoluteLayout>
+            <StackLayout Grid.Row="0" BackgroundColor="White" VerticalOptions="End">
+                <Frame>
+                    <ScrollView>
+                        <StackLayout>
+                            <StackLayout
+                                Margin="0, 0, 0, 20">
+                                <Label
+                                    Text="Datos personales"
+                                    TextColor="IndianRed"
+                                    FontAttributes="Bold"/>
+                                <StackLayout
+                                    Margin="0, 0, 0, 12">
+                                    <Frame BackgroundColor="Transparent" Margin="0" Padding="0" BorderColor="DarkGray" CornerRadius="50"  HorizontalOptions="FillAndExpand" >
+                                        <StackLayout Orientation="Horizontal">
+                                            <Frame BackgroundColor="AliceBlue" Padding="0" Margin="7,7,0,7" HorizontalOptions="Start" CornerRadius="50" HeightRequest="35" WidthRequest="35" />
+                                            <Entry x:Name="txtNombres" Keyboard="Text" Placeholder="Nombre Completo" TextColor="IndianRed" Margin="0,0,15,0" HorizontalOptions="FillAndExpand" />
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                                <StackLayout
+                                    Margin="0, 0, 0, 12">
+                                    <Frame BackgroundColor="Transparent" Margin="0" Padding="0" BorderColor="DarkGray" CornerRadius="50"  HorizontalOptions="FillAndExpand" >
+                                        <StackLayout Orientation="Horizontal">
+                                            <Frame BackgroundColor="AliceBlue" Padding="0" Margin="7,7,0,7" HorizontalOptions="Start" CornerRadius="50" HeightRequest="35" WidthRequest="35" />
+                                            <Entry x:Name="txtCorreo" Keyboard="Text" Placeholder="Correo Electronico" TextColor="IndianRed" Margin="0,0,15,0" HorizontalOptions="FillAndExpand" />
+                                        </StackLayout>
+                                    </Frame>
+
+                                </StackLayout>
+                                <StackLayout>
+                                    <Button
+                                        x:Name="btnActualizarDatos"
+                                        Text="Actualizar datos"
+                                        TextColor="White"
+                                        CornerRadius="6"
+                                        BackgroundColor="#bc246c"
+                                        Clicked="btnActualizarDatos_Clicked"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout
+                                Margin="0, 0, 0, 20">
+                                <Label
+                                    Text="Cambio de contraseña"
+                                    TextColor="IndianRed"
+                                    FontAttributes="Bold"/>
+                                <StackLayout
+                                    Margin="0, 0, 0, 12">
+                                    <Frame BackgroundColor="Transparent" Margin="0" Padding="0" BorderColor="DarkGray" CornerRadius="50"  HorizontalOptions="FillAndExpand" >
+                                        <StackLayout Orientation="Horizontal">
+                                            <Frame BackgroundColor="AliceBlue" Padding="0" Margin="7,7,0,7" HorizontalOptions="Start" CornerRadius="50" HeightRequest="35" WidthRequest="35" />
+                                            <Entry x:Name="txtOldPassword" Keyboard="Text" Placeholder="Nueva Contraseña" TextColor="IndianRed" Margin="0,0,15,0" HorizontalOptions="FillAndExpand" />
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                                <StackLayout
+                                    Margin="0, 0, 0, 12">
+                                    <Frame BackgroundColor="Transparent" Margin="0" Padding="0" BorderColor="DarkGray" CornerRadius="50"  HorizontalOptions="FillAndExpand" >
+                                        <StackLayout Orientation="Horizontal">
+                                            <Frame BackgroundColor="AliceBlue" Padding="0" Margin="7,7,0,7" HorizontalOptions="Start" CornerRadius="50" HeightRequest="35" WidthRequest="35" />
+                                            <Entry x:Name="txtNewPassword" Keyboard="Text" Placeholder="Repetir Contraseña" TextColor="IndianRed" Margin="0,0,15,0" HorizontalOptions="FillAndExpand" />
+                                        </StackLayout>
+                                    </Frame>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Button
+                                        x:Name="btnActualizarClave"
+                                        Text="Actualizar contraseña"
+                                        TextColor="White"
+                                        CornerRadius="6"
+                                        BackgroundColor="#bc246c"
+                                        Clicked="btnActualizarClave_Clicked"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <StackLayout>
+                                <Label
+                                    Text="Opciónes de cuenta"
+                                    TextColor="IndianRed"
+                                    FontAttributes="Bold"/>
+                                <StackLayout>
+                                    <Button
+                                        x:Name="btnCerrarSesion"
+                                        Text="Cerrar sesión"
+                                        TextColor="White"
+                                        CornerRadius="6"
+                                        BackgroundColor="DarkRed"
+                                        Clicked="btnCerrarSesion_Clicked"/>
+                                </StackLayout>
+                                <StackLayout>
+                                    <Button
+                                        x:Name="btnEliminarCuenta"
+                                        Text="Eliminar cuenta"
+                                        TextColor="White"
+                                        CornerRadius="6"
+                                        BackgroundColor="DarkRed"
+                                        Clicked="btnEliminarCuenta_Clicked"/>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </ScrollView>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
