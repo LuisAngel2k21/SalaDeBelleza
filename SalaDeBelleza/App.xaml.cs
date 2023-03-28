@@ -10,7 +10,7 @@ namespace SalaDeBelleza
         {
             InitializeComponent();
 
-            MainPage = new Views.Vperfil();
+            MainPage = new Views.MyPerfil();
         }
 
         protected override void OnStart()
